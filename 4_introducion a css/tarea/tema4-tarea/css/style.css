@@ -1,0 +1,103 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	
+	width: 90%;
+	background-color:#fff ;
+	
+	align-content: center;
+	margin: 0 auto;
+	align-items: center;
+	text-align: center;
+	
+}
+
+#cabecera{
+background-color:  rgb(249, 131, 47);
+font-size: 2em;
+
+}
+#item{
+	background-color: #FF712F;
+	font-size: 2em;
+}
+#content{
+
+	margin: 1px;
+	display: flex;
+	width: 100%;
+
+}
+/*estamos el el contenedor de caja content*/
+/*nav*/
+#left{
+	background-color: #9e948e;
+	width: 200px;
+
+
+}
+li{
+	background-color:#bc9e89 ;
+	padding: 5PX;
+	margin: 2px;
+	list-style: none;
+	color: #fff;
+}
+li:hover { 
+    background-color: red;
+    color: #fff;
+    cursor:pointer ;
+
+}
+#principal{
+	
+	background-color: #fff;
+	padding: 10px;
+	margin: 2px;
+	width: 700px;
+	
+
+
+}
+
+.principalSection{
+	
+	font-size: 2em;
+	padding: 10px;
+	margin: 3px;
+	border-radius: 10px;
+}
+.principalTitulo{
+	background-color: rgb(249, 131, 47);
+	border-radius: 15px;
+	padding: 10px;
+	margin: 2px;
+
+}
+
+.pricipalArticle{
+	background-color: #fff;
+
+	padding: 10px;
+	margin: 2px;
+
+}
+.principalFooter{
+	background-color:rgb(249, 131, 47);
+	padding: 5px;
+	margin: 2px;
+	border-radius: 
+
+}
+#right{
+	background-color: #9e948e;
+	width: 200px;
+}
+
+
+#pie{
+	background-color: rgb(249, 131, 47);
+}
+/*hecho por el alumno Huaman Galindo Melanio*/

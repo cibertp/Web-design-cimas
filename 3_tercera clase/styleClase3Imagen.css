@@ -1,0 +1,20 @@
+body{
+	background-color: tomato;
+	background: url(img-actividad/flecha.gif) no-repeat bottom right;
+}
+figure{
+	background-color: tomato;
+	width: 200px;
+	display: inline;
+}
+img{
+	width: 200px;
+
+}
+ul{
+	list-style: none;
+	list-style-image: url(img-actividad/flecha.gif);
+}
+nav {
+	background-color: rgba(155,264,12,0.2);
+}
