@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script src="js/video.js"></script>
+<style>
+	section{
+		background-color:#E32024;
+		margin: 0 auto;
+		width: 720px;
+		padding: 5px;
+		border-radius: 20px;
+		box-shadow:  5px 5px 5px tomato ;
+	}	
+	
+	nav{
+		margin: 5px 0;
+		
+	}
+	#botones{
+		float: left;
+		width: 100px;
+		height: 20px;
+		
+	}
+	#barra{
+		background: #fff;
+		width: 600px;
+		height: 16px;
+		border: 1px solid #666;
+		padding: 5px;
+		margin-left: 80px;
+	}
+	#progreso{
+		position: absolute;
+		width: 0px;
+		height: 16px;
+		background: rgb(0,0,150,2);
+	}
+	
+</style>
+</head>
+
+<section id="video">
+	<video id="mivideo" width="720px"  loop   autoplay>
+		<source src="video/LÉELO DEL REVÉS  Lytos.mp4">
+		
+	</video>
+	<nav>
+		
+
+		<div id="botones">
+			<button type="button" id="reproducir">play </button>
+		</div>
+		<div>
+			<div id="barra">d</div>
+			<div id="progreso">d</div>
+		</div>
+	</nav>
+</section>
+<body>
+</body>
+</html>
