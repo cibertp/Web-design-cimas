@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+<style>
+	form{
+		background-color: aqua;
+		padding: 30px;
+		boder: 5px solid red;
+		border-style: solid;
+		border-color: red green blue yellow;
+		width: 200px;
+		margin: 0 auto;
+		
+	}
+	label{
+		background-color: tomato;
+		width: 170px;	
+		padding: 6px;
+		border: 5px;
+		display: block;
+		text-align: center;
+	}
+	input{
+		
+		padding: 6px;
+		border: 5px;
+		margin-top:4px;
+		margin-bottom: 10px;
+		margin: 
+	}
+	
+	
+</style>
+
+<body>
+
+<section>
+	<form action="miformulario" id="miformulario" method="get" autocomplete="off" style="boder:15px solid tomato">
+		<label for="" name="texto"  >text </label>
+		<input type="text" name="texto" id="texto" autofocus>
+		
+		<label for="" name="texto"  >pattern DNI</label>
+		<input pattern="[0-9]{8}" name="patron" id="patron" >
+		
+		
+		<label for="">Email</label>
+		<input type="email" name="email" id="email" required multiple>
+		
+		<label for="">sereach</label>
+		<input type="sereach" name="buscar" id="buscar">
+		
+		<label for="">url</label>
+		<input type="url" name="url" id="url">
+		
+		<label for="">tel</label>
+		<input type="tel" name="telefono" id="telefono">
+		
+		<label for="">Number</label>
+		<input type="number"  name="numero" id="numero" mix="0" max="1000" step="5" placeholder="multiplo de 5">
+		
+		<label for="">range</label>
+		<input type="range" name="rango" id="rango">
+		
+		<label for="">date</label>
+		<input type="date" name="fecha" id="fecha">
+		
+		<label for="">week</label>
+		<input type="week" name="seman" id="semana">
+		
+		<label for="">month</label>
+		<input type="month" name="mes"  >
+		
+		<label for="">time</label>
+		<input type="time" name="hora" id="hora">
+		
+		<label for="">datetime</label>
+		<input type="datetime" name="datetime" id="datetime">
+		
+		
+		<input type="submit" value="Enviar" >
+		
+		
+</form>
+</section>
+</body>
+</html>
+<!--
+nuevoas etiqueta de 
+	-------------------
+			form
+	---------------------
+.autocomplete
+	-on 
+	-oof
+.Novalidate
+	-booleano
+
+	--------------------
+		input	
+	---------------------
+	text
+	email
+	search: casilla buscar algo
+	url
+	tel
+	number:juto con mix max y step
+	range:junto ocn min max y step->"es para decir q vaya en un intervalo especico 5 en cinco 0 2 en 2"
+	date
+	week
+	month
+	time
+	datetime
+	-----------------------
+		NUEVOS ATRIBUTOS
+	-----------------------
+	Placeholder
+	Required :se obliga que envie un campo especifico
+	Multiple : mas de un campo en un lugar especifico
+	aotofocus
+	pattern: establecer sietos valores complejas codigo posta puede ser o para DNI O RUC
+	form: nos sirve para dar mas o referencias a un formulario especifico ya que un elemento de formulario no esta en un formulario y esto lo hacemos mediante el el valor de name="nombreformularioReferencia" 
+	
+	
+-->
+

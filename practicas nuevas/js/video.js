@@ -16,7 +16,8 @@
 */
 
 
-var mivideo,reproducir,barra,progreso;
+var mivideo,reproducir,barra,progreso, ;
+var maximo=600;
 
 function comenzar(){
 	
@@ -40,9 +41,22 @@ function clicando(){
 	}else{
 		mivideo.play();
 		reproducir.innerHTML="pause";
+		/*estado;
+		//1000 milisegundo
+		bucle=setInterval(estado,1000);*/
 	}
 	
 }
 
+/*function estado(){
+	if(mivideo.ended==false){
+		var total= parseInt(mivideo.currentTime*maximo/mivideo.duration);
+		
+		progreso.style.width=total+"px";
+	}
+}
+*/
+
 
 window.addEventListener("load",comenzar,false);
+
