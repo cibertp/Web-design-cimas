@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>elemento canvas trazados</title>
+</head>
+<style>
+	#lienzo{
+		border: 1px solid red;
+	}
+	
+	</style>
+<script>
+
+	
+	function comenzar(){
+		
+		var elemento = document.getElementById("lienzo");
+		
+		lienzo = elemento.getContext("2d");
+		
+		lienzo.beginPath();
+		
+		lienzo.moveTo(100,200);
+			lienzo.lineTo(200,200);
+			lienzo.lineTo(150,150);
+			lienzo.lineTo(100,200);
+		lienzo.clip();
+		
+		
+		lienzo.beginPath();
+		
+		for(i=0;i<250; i=i+10){
+			lienzo.moveTo(0,i);
+			lienzo.lineTo(500,i);
+		}
+		
+		
+		
+		
+		
+		//lienzo.closePath();
+		lienzo.stroke();//dibujalo
+		//lienzo.fill();//pone relleno del elemento
+		
+		
+	}
+	
+	
+	window.addEventListener("load",comenzar,"false");
+	
+</script>
+<section>
+	
+	<canvas id="lienzo" width="500" height="300">
+	este no es soportado por su navegador
+		
+	</canvas>
+	
+</section>
+
+
+
+<body>
+</body>
+</html>
+<!--- 
+
+DOS ELEMENTO PARA COMENZAR Y CERRAR EL TRAZZADO
+
+	.begimnPath(); comienza la figura es el primer metodo en ser llamado
+	-closePath() termina la figura es el ulmo en ser llamado si se utiiliza fill()
+	para dibujar close pahth()  puede ser ignorado 
+	
+	TRES METOSDOS PARA DIBUJAR UN TRASADO
+	
+	-stroke() solo controno
+	-Fill () figura solida
+	clip() crea una mascara
+
+---------------------------------------
+	VARIOS METODOS()
+	POSTERIORMENTE DE SER CREADO O DIBUJADO EL
+---------------------------------
+
+moveTo(x,y ) mueve el lanpos al aposicion marcada en las coordenadas
+-lineTO(X,Y) genera linea resta desde la posicion actual de lapiz hasta la nuevas coordenadas
+-Rect(x,y,ancho ,alto) genera un rectangulo
+-arc(x,y,radio,angulo_inicial,angulo_final,direccion)
+-bezierCurverTO(A,B,X,D,X,Y) GENER UN ACURVA BEZIER CUBICA
+-quadractiCurveTO(a,b,x,y) genera una curva beizer cuadratica.
+
+-->
