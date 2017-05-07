@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>cambas</title>
+<style>
+	#lienzo{
+		background-color: #f00;
+		border: 2px solid #000;
+	}
+	section {
+		width: 500px;
+		position: relative;
+		margin:auto;
+	}
+	
+</style>
+
+
+<script>
+	
+	function comenzar(){
+		var elemento = document.getElementById("lienzo",false);
+	
+		lienzo= elemento.getContext("2d");
+		
+		lienzo.strokeStyle="#faf";		
+		lienzo.fillStyle="#aff";
+		
+		lienzo.globalAlpha=0.1; 
+		lienzo.strokeRect(20,20,140,140);
+		lienzo.fillRect(30,30,120,120);
+		
+		lienzo.clearRect(40,40,100,100)
+		
+		
+	}
+
+	window.addEventListener("load",comenzar,false);
+</script>
+</head>
+
+<body>
+
+<section id="dibujo">
+	 <canvas id="lienzo" width="500" height="300"  > 	
+	 	su navegador no soporta elemento html5 cambas
+	 	
+	 	
+	 	
+	 </canvas>
+</section>
+</body>
+</html>
+
+
+<!--   
+	--------------------------------------	
+		ELEMENTO CANVAS METODOS
+	----------------------------------------
+
+.Metodo getContext("2d");
+.fillRect(x,y,ancho,alto);dibuja restangulos solido
+.strockeRect(x,y,ancho,alto); dibujo restangulo basio
+.clerRect(x,y,ancho,alto) borra rectangular
+
+---------------------------------------------------
+
+	ELEMENTO CANVAS COLORES
+-----------------------------------------------------
+	.strokeStyle: propiedad para color de controno
+	.fillStyle: propiedad para color de relleno
+	.globalAlpha : transparencia de todas las figuras del lienzo  de 0 a 1;
+
+
+
+-->
