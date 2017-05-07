@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document</title>
+	
+	<style>
+		section {
+				width: 500px;
+			margin: auto;
+			
+		}
+		canvas{
+		
+		}
+		
+		
+		
+	</style>
+	<script>
+		
+		function gradiacion (){
+			
+			var elemento = document.getElementById("lienzo");
+			
+			lienzo= elemento.getContext("2d");
+			
+						
+			
+			/*var degradado = lienzo.createLinearGradient(0,150,500,150);*/
+			
+			var degradado= lienzo.createRadialGradient(250,150,50,250,150,300);
+			
+			
+			degradado.addColorStop(0,"#f00");
+			degradado.addColorStop(1,"#089430");
+			
+			
+			lienzo.fillStyle= degradado;
+			
+			
+			lienzo.fillRect(0,0,500,300);
+			
+			
+		}
+		
+		window.addEventListener("load",gradiacion,"false");
+		
+	</script>
+</head>
+<body>
+
+<section id="dibujo">
+	<canvas id="lienzo" height="300" width="500">
+		su navegador no soporta el elemento canvas
+		
+	</canvas>
+	
+</section>
+	
+</body>
+</html>
+
+
+
+<!-- 
+----------------------------------------------
+ 	ELEMENTOS CANVAS DEGRADOS
+ 	---------------------------------
+ 	
+ 	.createLinearGradient (x1,y1,x1,y2); crea objeto para aplicasr degradacion lineal(x1,y1) margan  el inicio del degradado
+ 	.createRadialGradient(x1,y1,x2,y2); crea un onjeto para aplicar degrados cirulares oradial x= centeo del circulo  y radio= radio del circulo
+ 	.addColorStop(posisiocn color) docnde posiscin marca donde empies el degradado valores entre 0.0 y 1.0
+  
+    (x1,y1) margan  el inicio del degradado
+     (x2,y2) margan  el final del degradado
+      
+  -->
