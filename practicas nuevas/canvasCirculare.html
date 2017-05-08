@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+<style>
+	#lienzo{
+		border: 1px solid #f00;
+
+		
+	}
+	
+</style>
+<script>
+	function comenzar() {
+		var elemento = document.getElementById("lienzo");
+	lienzo= elemento.getContext("2d");
+	
+	lienzo.beginPath();
+	
+	/*lienzo.arc(100,100,50,0,1,true);*/
+	//lienzo.arc(100,100,50,0,Math.PI,false);
+	//	lienzo.moveTo(50,50);//PUNATO INICIAL
+	//	lienzo.quadraticCurveTo(100,125,50,200);
+		//100,125 ES PUNTO DE control
+		//50,200 es ke punto final
+		lienzo.moveTo(50,50);
+		lienzo.bezierCurveTo(250,125,300,125,250,200);
+		
+		lienzo.stroke();
+	lienzo.closePath() ;
+		
+	}
+	
+	
+	
+	window.addEventListener("load",comenzar,"false");
+	
+</script>
+
+</head>
+<body>
+
+<section>
+	
+	<canvas id="lienzo" width="300" height="500">
+	Este navegador no soporta canvas
+		
+	</canvas>
+</section>
+
+
+</body>
+</html>
+<!--
+
+------------------------------------
+	FORMAS CIRCULARE
+---------------------------------
+
+	-Arc(posicionX,posicionY,Radio,poscion0Angulo,radianes,false)
+	por porpiedad se sabe si el radio es igual  la longitud de la circunferencia  ENTONCES ES 1 RADIAL	L=R= 1radian
+	frue en solo el pedacito del arco o tru para ver el circulo
+	 
+	-- para dibujar arcos 
+	-QuadraticCurveTO()-- dibujar trasado curvos
+	BezierCurveTo()-- dibuja trasado curvo con  dos pustos de control
+-->
