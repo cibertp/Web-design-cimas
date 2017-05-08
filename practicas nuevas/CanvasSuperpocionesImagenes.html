@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Superposiciones e imagenes</title>
+
+
+<style>
+	#lienzo{
+		border:1px solid chartreuse;
+	}
+	
+</style>
+
+<script>
+	
+	function comenzar(){
+		
+		var elemento = document.getElementById("lienzo");
+		lienzo= elemento.getContext("2d");
+		
+		var imagen=new Image();
+		
+		imagen.src="http://elucabista.com/wp-content/uploads/2015/07/informatica-800x478.jpg";
+
+		imagen.addEventListener("load",function(){      
+		lienzo.drawImage(imagen,250,20,400,350)},"false");
+		//imagen,0,0,elemento.height,elemento.height
+		//image ,50,40,75,75,0,0,300,300
+		lienzo.drawImage()
+			
+		/*lienzo.fillStyle="#880000";
+		lienzo.fillRect(400,250,300,100);
+		
+		lienzo.globalCompositeOperation="destination-atop";
+		
+		lienzo.fillStyle="#aaaaff";
+		lienzo.font="bold 80px solid";
+		lienzo.textAlign="center";
+		lienzo.textBaseline="middle";
+		lienzo.fillText("hola poeta",550,300);
+		*/
+		
+
+	}
+	
+	
+	window.addEventListener("load",comenzar,"false");
+</script>
+
+</head>
+
+
+
+
+
+
+<body>
+
+<section>
+	<canvas id="lienzo" width="1200" height="800">
+		
+		no soportado
+	</canvas>
+	
+</section>
+</body>
+</html>
