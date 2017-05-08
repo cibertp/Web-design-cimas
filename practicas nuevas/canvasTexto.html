@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+<style>
+	secton{
+		overflow: hidden;
+	}
+	
+	#lienzo{
+		border: 5px solid green;
+		overflow: hidden;
+	}
+	
+	
+</style>
+
+<script>
+	function comenzar(){
+		var elemento = document.getElementById("lienzo");
+		lienzo= elemento.getContext("2d");
+
+		
+		lienzo.beginPath();
+		lienzo.shadowColor="rgba(0,0,0,0.5)";
+		
+		lienzo.shadowOffsetX=4;
+		lienzo.shadowOffsetY=5;
+		
+		
+		lienzo.shadowBlur=5;
+		
+		lienzo.font="bold 44px verdana";
+		lienzo.textAlign="start";  //iniciar (start)
+		lienzo.textBaseline="top";
+		lienzo.fillText("HOLA MI QUERIDO POETA ",100,100);
+		
+		var dimenciones = lienzo.measureText("HOLA MI QUERIDO POETA");//mide el ancho de cuanto mirde el parara que pusimo sen fill text
+		
+		
+		//lienzo.strokeRect(100,100,dimenciones.width+10,48);
+	}
+	
+	window.addEventListener("load",comenzar,"false");
+	
+</script>
+
+
+<body>	
+	  
+	<section> 
+		<canvas id="lienzo" width="800" height="300"> 
+		no soportado por tu navegador
+	</canvas>
+	</section>
+  
+	  
+</body>
+</html>
+
+<!--
+	-----------------------------------------------
+	PROPIEDADES DE API CANVAS PARA TEXTO
+	-------------------------------------------
+	LAS API PROPOCIERNA 3 PROPIEDAD PAR AL CONFIGURACION DE TEXTO
+	--Font : mismos valores de css
+	--TextAligen; alinacion horizontal del texto con los sieguientes valores
+		.start
+		end
+		left
+		Right
+		Center
+	-- TextBaseLine: aliniamiento vertical con los siguiente valores
+		top
+		Hanging
+		middle
+		AlPhabatic
+		ideographic
+		bottom
+		----------------------------------------------
+		LAS APIS PROPOCCIONA 3 metodo para dibujar texto
+		-StrokeText(texto,x,y) dibuja texto sin contorno
+		-fillText(TEXT,X,Y) DIbuja texto con relleno
+		-measureText ; devuelve informacion sobre tamaño del texto util en animaciones
+	-------------------------------------------------
+	LAS APIS PARA PROPORCINAR 4 PROPIEDADES PARA LAS SOMBRAS
+	-shadowColor color de sombre
+	*shadowOffsetX Desplasamiento horizontal de la sombre
+	-ShadowOffsety DESPLASAMIENTO verticasl de lal sombre
+	-shadowBlur DIFUMINADO  LA SOMBRA
+-->
