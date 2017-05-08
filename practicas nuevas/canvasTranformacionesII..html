@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>canvas</title>
+<style>
+	section{
+		width: 300px;
+	}
+	#lienzo{
+		border: 1px solid #f00;
+	}
+	
+</style>
+<script>
+	function comenzar(){
+		var elemento = document.getElementById("lienzo");
+		lienzo= elemento.getContext("2d");
+		
+		
+		lienzo.font="bold 20px verdana";
+		lienzo.save();
+		
+		lienzo.fillText("hola poeta",50,50);
+		lienzo.translate(60,70);
+		lienzo.rotate(Math.PI/180*55);
+		lienzo.fillText("hola poeta",0,0);
+		lienzo.translate(300,400);
+		
+		lienzo.translate(300,400);
+		lienzo.scale(2,2);
+		lienzo.fillText("hola alumnos",0,0);
+		
+		
+		
+		
+	}
+
+	window.addEventListener("load",comenzar,"false");
+</script>
+</head>
+<body>
+
+<section>
+	<canvas id="lienzo" height="800" width="1200">
+		no soportado canvas (radianes)
+	</canvas>
+</section>
+
+</body>
+</html>
+<!-- 
+
+Transforma(m1,m2,m3, dx, dy) camabia las caracteristicas de lienzo
+	SetTransforma(m1,m2,m3, dx, dy) reinicia los caracteriscticas
+	Save() graba el estado del lienzo
+
+	Rectore() restaura el estado grabado del lienzo
+
+------------
+NOTA
+--------
+
+	lienzo.beginPath();
+		lienzo.transform(1,0,0,1,0,0);//por defecto
+		/*             |-||-|-|-|----|
+		tamaño__________↑ ↑ ↑ ↑  ↑
+		rotate_(radianes)_↑ ↑ ↑  ↑
+		cunvar o curverar---↑ ↑	 ↑
+		posicion doble________↑  ↑
+	este son los puntos (x1,y1)__↑							
+		*/
+		lienzo.transform(3,0,0,1,0,0);
+		lienzo.font="bold 20px verdana";
+		lienzo.fillText("hola poeta",50,50);
+		
+		lienzo.closePath();
+		
+		
+		lienzo.beginPath();
+		lienzo.transform(1,0,0,10,0,0);
+		//nota este liensie esto tomando su anterior medida mas el propio y por eso utilzaremos setTransform
+		lienzo.setTransform(1,0,0,10,0,0);
+		lienzo.fillText("hola poeta",50,50);
+		
+		
+		lienzo.beginPath();
+
+
+
+-->
+
