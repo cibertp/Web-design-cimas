@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+	<style>
+	#lienzo{
+	border:2px dashed  red;
+	
+	</style>
+	
+	<script>
+		function comenzar(){
+			
+			var elemento = document.getElementById("lienzo");
+		
+			lienzo= elemento.getContext("2d");
+
+			
+			lienzo.arc(200,150,100,0,Math.PI*2,false);
+			lienzo.stroke();
+			lienzo.lineWidth=10;//tamaño la linea
+			lienzo.lineCap="round";//como termina el trasado
+			lienzo.lineCap="square";
+			lienzo.lineCap= "butt";
+			
+			
+			lienzo.beginPath();
+			lienzo.arc(200,170,60,0,Math.PI,false);
+			lienzo.stroke();
+			
+			
+			lienzo.lineWidth=5;
+			lienzo.lineJoin="miter";
+			lienzo.lineJoin="round";
+			lienzo.lineJoin="bevel";
+			///solo con miter
+			lienzo.miterLimit=5;//para quitar la puntita o el final
+			
+			lienzo.beginPath();			
+			lienzo.moveTo(195,135);
+			lienzo.lineTo(215,155);
+			lienzo.lineTo(195,155);
+			lienzo.stroke();
+			
+			lienzo.lineWidth=1;
+			lienzo.beginPath();
+			lienzo.arc(175,106,7,0,Math.PI*2,false);
+			lienzo.arc(225,107,7,0,Math.PI*2,false);//pjotito derecho
+			lienzo.fill();
+			
+			lienzo.beginPath();
+			lienzo.arc(168,106,15,0,Math.PI*2,false);
+			lienzo.stroke();
+			
+			lienzo.beginPath();
+			lienzo.arc(232,106,15,0,Math.PI*2,false);
+			lienzo.stroke();
+			
+			lienzo.closePath();
+		
+		}
+	
+	
+	window.addEventListener("load",comenzar,"false")
+	</script>
+
+
+<section>
+	<canvas id="lienzo" width="400" height="300">
+		su navegador no soporta canvas
+	</canvas>
+</section>
+
+<body>
+</body>
+</html>
