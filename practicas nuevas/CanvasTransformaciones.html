@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas transformaciones</title>
+</head>
+<style>
+	#lienzo{
+		border: 1px solid #f00;
+	}
+	
+</style>
+<script>
+	
+	function comenzar (){
+		
+		var elemento = document.getElementById("lienzo");
+		
+		lienzo= elemento.getContext("2d");
+		
+		lienzo.font="bold 20px verdana";
+		lienzo.fillText("bienvenido poeta",50,20);
+		
+		lienzo.translate(100,100);//con esto se crea un lienzo de apartir del contenerod por eje de cordenada  y absisa
+		lienzo.fillText("bienvenido poeta",50,20);
+		lienzo.scale(3,3);
+		
+		
+		
+		
+		lienzo.rotate(Math.PI);
+		lienzo.fillText("bienvenido poeta",-200,-120);
+		
+		lienzo.beginPath();
+		
+		lienzo.closePath();
+		
+	}
+	
+	
+	window.addEventListener("load",comenzar,"false");
+	
+</script>
+
+<body>
+
+<section>
+	<canvas id="lienzo" width="1200" height="800">
+		no esta soportado tu navegador
+	</canvas>
+</section>
+
+</body>
+</html>
+
+
+
+
+<!-- 
+	--------------------------------------------------
+	METODO DE API CANVAS PARA TRANSFORMACIONES
+	Translate(x,y)  Mueve el originn del lienzo
+	Rotate(radieanes) rota el liezo
+	Scale)(x,y) aument o disminuye el lienzo
+	Transforma(m1,m2,m3, dx, dy) camabia las caracteristicas de lienzo
+	SetTransforma(m1,m2,m3, dx, dy) reinicia los caracteriscticas
+	Save() graba el estado del lienzo
+	Rectore() restaura el estado grabado del lienzo
+
+
+
+
+
+
+
+-->
