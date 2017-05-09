@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+	#cajaimagen{
+		float: left;
+		width: 300px;
+		margin: 30px;
+		border: 1px dashed  #f00;
+	}
+	#zonadestino{
+		float: left;
+		width: 500px; /*pongamos un tamaño mayor de la propia imagen*/
+		height: 400px;
+		margin: 100px ;
+		border: 1px dashed rgba(2,34,221,1.00);
+		
+	}
+
